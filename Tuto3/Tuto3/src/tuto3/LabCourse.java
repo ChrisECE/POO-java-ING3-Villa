@@ -9,15 +9,15 @@ package tuto3;
  *
  * @author chris
  */
-public class LabCourse extends CollegeCourse{
-    public LabCourse(String dep, int nb, int credit){
-        super(dep,nb,credit);
-        fee+=50;
+public class LabCourse extends CollegeCourse {
+    public LabCourse(final String dep, final int nb, final int credit){
+        super(dep, nb, credit);
+        fee += 50;
     }
     
     @Override
     public void display(){
         System.out.println("This is a lab course");
-        System.out.println("Department -> "+department+"\nCourse number -> "+courseNb+"\nCredits -> "+credits+"\nFee -> "+fee);
+        super.display();
     }
 }

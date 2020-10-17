@@ -15,15 +15,20 @@ public class CollegeCourse {
     protected int credits;
     protected int fee;
     
-    public CollegeCourse(String dep, int nb, int credit){
-        department= dep;
-        courseNb=nb;
-        credits=credit;
-        fee=credits*120;
+    public CollegeCourse(final String dep, final int nb, final int credit){
+        department = dep;
+        courseNb = nb;
+        credits = credit;
+        fee = credits*120;
     }
     
     public void display(){
-        System.out.println("Department -> "+department+"\nCourse number -> "+courseNb+"\nCredits -> "+credits+"\nFee -> "+fee);
+        System.out.println(toString());
+    }
+    
+    @Override
+    public String toString() {
+        return "Department -> "+department+"\nCourse number -> "+courseNb+"\nCredits -> "+credits+"\nFee -> "+fee;
     }
     
 }

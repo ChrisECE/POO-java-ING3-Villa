@@ -9,10 +9,10 @@ package tuto3;
  *
  * @author chris
  */
-public class HolidayCabinRental extends CabinRental{
+public class HolidayCabinRental extends CabinRental {
     
-    public HolidayCabinRental(int nb){
+    public HolidayCabinRental(final int nb){
         super(nb);
-        this.weeklyRR+=150;
+        this.weeklyRR += 150;
     }
 }

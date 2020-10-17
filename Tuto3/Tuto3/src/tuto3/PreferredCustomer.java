@@ -9,13 +9,13 @@ package tuto3;
  *
  * @author chris
  */
-public class PreferredCustomer extends Customer{
+public class PreferredCustomer extends Customer {
     private double amount;
     private int level;
     
-    public PreferredCustomer(String nam,String ad,long num,int nb,boolean b,double amoun){
-        super(nam,ad,num,nb,b);
-        amount=amoun;
+    public PreferredCustomer(final String nam, final String ad, final long num, final int nb, final boolean b, final double amoun){
+        super(nam, ad, num, nb, b);
+        amount = amoun;
     }
     
     public void displayAll(){
@@ -32,24 +32,20 @@ public class PreferredCustomer extends Customer{
         return level;
     }*/
     
-    public void setAmount(double a){
-        amount=a;
+    public void setAmount(final double a){
+        amount = a;
     }
     
     public void setLevel(){
-        if(amount>=2000){
+        if (amount>=2000){
             level=10;
-        }
-        else if(amount>=1500){
+        } else if (amount>=1500) {
             level=7;
-        }
-        else if(amount>=1000){
+        } else if (amount>=1000) {
             level=6;
-        }
-        else if(amount>=500){
+        } else if (amount>=500) {
             level=5;
-        }
-        else{
+        } else {
             level=0;
         }
     }

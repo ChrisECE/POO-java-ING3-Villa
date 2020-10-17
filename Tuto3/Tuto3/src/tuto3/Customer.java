@@ -9,14 +9,14 @@ package tuto3;
  *
  * @author chris
  */
-public class Customer extends Person{
+public class Customer extends Person {
     protected int number;
     protected boolean mail;
     
-    public Customer(String nam,String ad,long num,int nb,boolean b){
-        super(nam,ad,num);
-        number=nb;
-        mail=b;
+    public Customer(final String nam, final String ad, final long num, final int nb, final boolean b){
+        super(nam, ad, num);
+        number = nb;
+        mail = b;
     }
     
     public void displayC(){

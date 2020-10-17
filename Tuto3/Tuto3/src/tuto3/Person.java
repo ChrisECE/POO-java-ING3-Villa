@@ -14,14 +14,19 @@ public class Person {
     protected String address;
     protected long phoneNb;
     
-    public Person(String nam,String ad,long nb){
-        name=nam;
-        address=ad;
-        phoneNb=nb;
+    public Person(final String nam, final String ad, final long nb){
+        name = nam;
+        address = ad;
+        phoneNb = nb;
     }
     
     public void displayP(){
-        System.out.println("Name -> "+name+"\nAddress -> "+address+"\nPhone number -> "+phoneNb);
+        System.out.println(toString());
+    }
+    
+    @Override
+    public String toString() {
+        return "Name -> "+name+"\nAddress -> "+address+"\nPhone number -> "+phoneNb;
     }
     
     /*public String getName(){
