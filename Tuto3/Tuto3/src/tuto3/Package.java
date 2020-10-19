@@ -14,46 +14,45 @@ public class Package {
     private char method;
     protected double cost;
     
-    public Package(int w,char m){
-        weight=w;
-        method=m;
-        cost=calculateCost();
+    public Package(final int w, final char m){
+        weight = w;
+        method = m;
+        cost = calculateCost();
     }
     
     public void display(){
-        System.out.println("Weight -> "+weight+"\nShipping method -> "+method+"\nCost -> "+cost);
+        System.out.println(toString());
+    }
+    
+    @Override
+    public String toString() {
+        return "Weight -> "+weight+"\nShipping method -> "+method+"\nCost -> "+cost;
     }
     
     public final double calculateCost(){
         switch (method) {
             case 'A':
-                if(weight>=1 && weight<=8){
+                if (weight>=1 && weight<=8) {
                     return 2.00;
-                }
-                else if(weight>=9 && weight<=16){
+                } else if (weight>=9 && weight<=16) {
                     return  3.00;
-                }
-                else{
+                } else {
                     return 4.50;
                 }
             case 'T':
-                if(weight>=1 && weight<=8){
+                if (weight>=1 && weight<=8) {
                     return 1.50;
-                }
-                else if(weight>=9 && weight<=16){
+                } else if (weight>=9 && weight<=16) {
                     return 2.35;
-                }
-                else{
+                } else{
                     return 3.25;
                 }
             case 'M':
-                if(weight>=1 && weight<=8){
+                if (weight>=1 && weight<=8) {
                     return 0.50;
-                }
-                else if(weight>=9 && weight<=16){
+                } else if (weight>=9 && weight<=16) {
                     return 1.50;
-                }
-                else{
+                } else{
                     return 2.15;
                 }
             default:
